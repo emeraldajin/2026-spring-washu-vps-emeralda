@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myDiv{
+        background-color:orange;
+        padding:3px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: large;
+        }
+        .lineDiv{
+        background-color:brown;
+        height:1px
+        }
+        .menuDiv{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top:1em;
+            margin-bottom: 3em;
+        }
+        .openDiv{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            align-items: center;
+            margin-bottom:3em;
+        }
+        body{
+            color:brown;
+            text-align:center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        img{
+            margin: 1.5em;
+            width:80%;
+        }
+        iframe{
+            border:none;
+            width:590px;
+            height:200px;
+            margin-bottom: 1.5em;
+            overflow:hidden;
+            transition:0.5s;
+        }
+        iframe:hover{
+            transform: scale(1.5);
+            z-index:10;
+            position:relative;
+        }
+    </style>
+</head>
+<body style = background-color:antiquewhite>
+    <audio autoplay loop>
+        <source src="https://www.youtube.com/watch?v=owmWkwLj4KQ&list=RDowmWkwLj4KQ&start_radio=1" type="audio/mpeg">
+    </audio>
+    <div class="myDiv"><h1 id="soup-dumplings-stl">Soup Dumplings STL</h1></div> 
+    <br>
+    <iframe src= "images.html"></iframe>
+    <div class="lineDiv"></div>
+    <h2 id="menu">Menu</h2>
+    <div class="lineDiv"></div>
+    <div class = "menuDiv">
+        <div class = "food">
+            <h3 id="left"><div>Soup Dumplings</div></h3>
+            <strong>Pork</strong> — $9.00 <br>
+            <strong>Chicken</strong> — $9.00 <br>
+            <strong>Beef</strong> — $9.90 <br>
+            <strong>Crab &amp; Pork</strong> — $12.75 <br>
+            <strong>Shrimp &amp; Cheese</strong> — $12.50 <br>
+            <br>
+            <h3 id="entrees">Entrees</h3>
+            <strong>Chicken Leg &amp; Rice</strong> — $11.50 <br>
+            <strong>Braised Pork &amp; Rice</strong> — $11.50 <br>
+            <strong>Hot Wings</strong> — $8.95 <br>
+        </div>
+        <div class = "right">
+            <h3 id="cold-dishes">Cold Dishes</h3>
+            <strong>Drunken Chicken</strong> — $15.50 <br>
+            <strong>Cucumber Salad</strong> — $7.95 <br>
+            
+            <h3 id="wonton-soups">Wonton Soups</h3>
+            <strong>Shrimp and Pork</strong> — $13.25 <br>
+            
+            <h3 id="drinks">Drinks</h3>
+            <strong>Fresh Squeezed Juice</strong> — $4.75 <br>
+            <strong>Soda</strong> — $1.95 <br>
+            <strong>Bottle Water</strong> — $1.50 <br>
+    
+        </div>
+    </div>
+    <div class="lineDiv"></div>
+    <h2 id="opening-hours">Opening Hours</h2>
+    <div class="openDiv">
+        <div class="imageDiv"></div>
+        <div class="daysDiv">
+            <b>Monday</b><br>
+            <b>Tuesday</b><br>
+            <b>Wednesday</b><br>
+            <b>Thursday</b><br>
+            <b>Friday</b><br>
+            <b>Saturday</b><br>
+            <b>Sunday</b><br>
+        </div>
+        <div class="timeDiv">
+            11AM–8PM<br>
+            <i>Closed</i><br>
+            11AM–8PM<br>
+            11AM–8PM<br>
+            11AM–8PM<br>
+            11AM–8PM<br>
+            11AM–8PM<br>
+        </div>
+        <div class="imageDiv"></div>
+    </div>
+    <div class="lineDiv"></div>
+    <h2 id="call-us-">Call Us?</h2>
+    <p>+1-314-445-4605</p>   
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6229.8935835054!2d-90.3489793244726!3d38.673090871772864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87df34dd538f2797%3A0x9eedc4fd3ad7a4a9!2sSoup%20Dumplings%20STL!5e0!3m2!1sen!2sus!4v1769976273637!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+</html>

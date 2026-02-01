@@ -7,63 +7,63 @@
     <style>
         .myDiv{
         background-color:orange;
+        padding:3px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
         }
         .lineDiv{
         background-color:brown;
         height:1px
         }
+        .menuDiv{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            align-items: center;
+            margin-bottom:3em;
+        }
         body{
             color:brown;
             text-align:center;
         }
-        table{
-            width: 100%;
-            border-collapse:collapse;
+        img{
+            margin: 1.5em;
+            width:80%;
         }
-        th{
-            text-align: center;
-        }
-        td{
-            text-align: center;
+        iframe{
+            border:none;
+            width:590px;
+            height:200px;
         }
     </style>
 </head>
 <body style = background-color:antiquewhite>
     <div class="myDiv"><h1 id="soup-dumplings-stl">Soup Dumplings STL</h1></div> 
-    <h3 id="visit-at">Visit At</h3>
-    <p>8106 Olive Blvd, St. Louis, MO 63130</p>
+    <br>
+    <iframe src= "images.html"></iframe>
+    <h4><i>8106 Olive Blvd, St. Louis, MO 63130</i></h4>
     <div class="lineDiv"></div>
     <h2 id="opening-hours">Opening Hours</h2>
-    <table>
-        <tr>
-            <th>Monday</th>
-            <td>11AM-8PM</td>
-        </tr>
-        <tr>
-            <th>Tuesday</th>
-            <td>Closed</td>
-        </tr>
-        <tr>
-            <th>Wednesday</th>
-            <td>11AM-8PM</td>
-        </tr>
-        <tr>
-            <th>Thursday</th>
-            <td>11AM-8PM</td>
-        </tr>
-        <tr>
-            <th>Friday</th>
-            <td>11AM-8PM</td>
-        </tr>
-        <tr>
-            <th>Saturday</th>
-            <td>11AM-8PM</td>
-        </tr>
-        <tr>
-            <th>Sunday</th>
-            <td>11AM-8PM</td>
-        </tr>
-    </table>
+    <div class="menuDiv">
+        <div class="imageDiv"></div>
+        <div class="daysDiv">
+            <b>Monday</b><br>
+            <b>Tuesday</b><br>
+            <b>Wednesday</b><br>
+            <b>Thursday</b><br>
+            <b>Friday</b><br>
+            <b>Saturday</b><br>
+            <b>Sunday</b><br>
+        </div>
+        <div class="timeDiv">
+            11AM–8PM<br>
+            <i>Closed</i><br>
+            11AM–8PM<br>
+            11AM–8PM<br>
+            11AM–8PM<br>
+            11AM–8PM<br>
+            11AM–8PM<br>
+        </div>
+        <div class="imageDiv"></div>
+    </div>
     <div class="lineDiv"></div>
     <h2 id="menu">Menu</h2>
     <h3 id="soup-dumplings">Soup Dumplings</h3>
