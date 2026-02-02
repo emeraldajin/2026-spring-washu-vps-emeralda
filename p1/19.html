@@ -15,6 +15,10 @@
         background-color:brown;
         height:1px
         }
+        .headers{
+            background-color:orange;
+            padding: 1px;
+        }
         .menuDiv{
             display:grid;
             grid-template-columns: 1fr 1fr;
@@ -26,6 +30,7 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
             align-items: center;
             margin-bottom:3em;
+            margin-top: 2em;
         }
         body{
             color:brown;
@@ -49,17 +54,43 @@
             z-index:10;
             position:relative;
         }
+        .title span{
+            display:inline-block;
+            animation: wave 2s ease-in-out infinite;
+        }
+        .title span:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .title span:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+        .title span:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        @keyframes wave{
+            0%,100%{
+                transform:translateY(20);
+            }
+            50%{
+                transform:translateY(-20px)
+            }
+        }
+
     </style>
 </head>
 <body style = background-color:antiquewhite>
     <audio autoplay loop>
         <source src="https://www.youtube.com/watch?v=owmWkwLj4KQ&list=RDowmWkwLj4KQ&start_radio=1" type="audio/mpeg">
     </audio>
-    <div class="myDiv"><h1 id="soup-dumplings-stl">Soup Dumplings STL</h1></div> 
+    <div class="myDiv"><h1 class="title">
+        <span>Soup</span>
+        <span>Dumpling</span>
+        <span>STL</span>
+    </h1></div> 
     <br>
     <iframe src= "images.html"></iframe>
     <div class="lineDiv"></div>
-    <h2 id="menu">Menu</h2>
+    <div class="headers"><h2 id="menu">Menu</h2></div>
     <div class="lineDiv"></div>
     <div class = "menuDiv">
         <div class = "food">
@@ -91,7 +122,8 @@
         </div>
     </div>
     <div class="lineDiv"></div>
-    <h2 id="opening-hours">Opening Hours</h2>
+    <div class="headers"><h2 id="opening-hours">Opening Hours</h2></div>
+    <div class="lineDiv"></div>
     <div class="openDiv">
         <div class="imageDiv"></div>
         <div class="daysDiv">
@@ -115,7 +147,8 @@
         <div class="imageDiv"></div>
     </div>
     <div class="lineDiv"></div>
-    <h2 id="call-us-">Call Us?</h2>
+    <div class="headers"><h2 id="call-us-">Call Us?</h2></div>
+    <div class="lineDiv"></div>
     <p>+1-314-445-4605</p>   
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6229.8935835054!2d-90.3489793244726!3d38.673090871772864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87df34dd538f2797%3A0x9eedc4fd3ad7a4a9!2sSoup%20Dumplings%20STL!5e0!3m2!1sen!2sus!4v1769976273637!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </body>
