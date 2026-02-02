@@ -15,7 +15,7 @@
             padding: 1%;
             transition: 0.5s;
         }
-        .titleDiv:hover{
+        .titleDiv:hover, .titleDiv:active{
             transform:skew(20deg, 20deg);
             z-index:10;
             position:relative;
@@ -24,7 +24,7 @@
             background-color:chocolate;
             transition: 0.5s;
         }
-        .myDiv:hover{
+        .myDiv:hover, .myDiv:active{
             transform:skew(-20deg, -20deg);
             z-index:10;
             position:relative;
@@ -35,11 +35,27 @@
         table{
             width: 50%;
             border-collapse:collapse;
+            transition:0.5s;
+        }
+        tr{
+            transition:0.5s;
+        }
+        tr:hover,  tr:active{
+            transform: scale(1.5);
+            z-index:5;
         }
         .menu{
             display:grid;
             grid-template-columns: 1fr 1fr;
             margin-bottom: 3em;
+        }
+        .food{
+            transition:0.5s;
+        }
+        .food:hover, .food:active{
+            transform:scale(1.2);
+            z-index:5;
+            position:relative;
         }
         h3{
             margin-top:2em;
@@ -60,10 +76,17 @@
             overflow:hidden;
             transition:0.5s;
         }
-        iframe:hover{
+        iframe:hover, iframe:active{
             transform: scale(1.5);
             z-index:10;
             position:relative;
+        }
+        p{
+            transition:0.5s;
+        }
+        p:hover, p:active{
+            transform:scale(0.5);
+            z-index:5;
         }
     </style>
 </head>
@@ -88,7 +111,7 @@
             <strong>Braised Pork &amp; Rice</strong> — $11.50 <br>
             <strong>Hot Wings</strong> — $8.95 <br>
         </div>
-        <div class = "right">
+        <div class = "food">
             <h3 id="cold-dishes">Cold Dishes</h3>
             <strong>Drunken Chicken</strong> — $15.50 <br>
             <strong>Cucumber Salad</strong> — $7.95 <br>
@@ -140,6 +163,6 @@
 </body>
     <div class="myDiv"><h2 id="call-us-">Call Us?</h2></div>
     <p>+1-314-445-4605</p>
-    <br>
+    <br><br><br>
 </body>
 </html>
