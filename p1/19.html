@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .tiny{
+            font-size: small;
+        }
         .myDiv{
         background-color:orange;
         padding:3px;
@@ -75,7 +78,11 @@
                 transform:translateY(-20px)
             }
         }
-
+        @media only screen and (max-width:500px){
+            .myDiv, .titleDiv, table, iframe{
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body style = background-color:antiquewhite>
@@ -95,12 +102,13 @@
     <div class = "menuDiv">
         <div class = "food">
             <h3 id="left"><div>Soup Dumplings</div></h3>
+            <p class="tiny">Comes with six dumplings each!</p>
             <strong>Pork</strong> — $9.00 <br>
             <strong>Chicken</strong> — $9.00 <br>
             <strong>Beef</strong> — $9.90 <br>
             <strong>Crab &amp; Pork</strong> — $12.75 <br>
             <strong>Shrimp &amp; Cheese</strong> — $12.50 <br>
-            <br>
+            
             <h3 id="entrees">Entrees</h3>
             <strong>Chicken Leg &amp; Rice</strong> — $11.50 <br>
             <strong>Braised Pork &amp; Rice</strong> — $11.50 <br>
