@@ -25,7 +25,8 @@
         }
         .menuDiv{
             display:grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            align-items: center;
             margin-top:1em;
             margin-bottom: 3em;
         }
@@ -40,6 +41,7 @@
             color:brown;
             text-align:center;
             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            line-height:1.6;
         }
         img{
             margin: 1.5em;
@@ -79,7 +81,15 @@
                 transform:translateY(-20px)
             }
         }
-        @media only screen and (max-width:500px){
+        @media only screen and (max-width:800px){
+            .menuDiv{
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media only screen and (max-width:538px){
+            .menuDiv{
+                grid-template-columns: 1fr;
+            }
             .myDiv, .titleDiv, table, iframe{
                 width: 100%;
             }
@@ -101,6 +111,7 @@
     <div class="headers"><h2 id="menu">Menu</h2></div>
     <div class="lineDiv"></div>
     <div class = "menuDiv">
+        <div class="outskirt"></div>
         <div class = "food">
             <h3 id="left"><div>Soup Dumplings</div></h3>
             <p class="tiny">Comes with six dumplings each!</p>
@@ -109,7 +120,7 @@
             <strong>Beef</strong> — $9.90 <br>
             <strong>Crab &amp; Pork</strong> — $12.75 <br>
             <strong>Shrimp &amp; Cheese</strong> — $12.50 <br>
-            
+            <br>
             <h3 id="entrees">Entrees</h3>
             <strong>Chicken Leg &amp; Rice</strong> — $11.50 <br>
             <strong>Braised Pork &amp; Rice</strong> — $11.50 <br>
@@ -119,16 +130,16 @@
             <h3 id="cold-dishes">Cold Dishes</h3>
             <strong>Drunken Chicken</strong> — $15.50 <br>
             <strong>Cucumber Salad</strong> — $7.95 <br>
-            
+            <br>
             <h3 id="wonton-soups">Wonton Soups</h3>
             <strong>Shrimp and Pork</strong> — $13.25 <br>
-            
+            <br>
             <h3 id="drinks">Drinks</h3>
             <strong>Fresh Squeezed Juice</strong> — $4.75 <br>
             <strong>Soda</strong> — $1.95 <br>
             <strong>Bottle Water</strong> — $1.50 <br>
-    
         </div>
+        <div class="outskirt"></div>
     </div>
     <div class="lineDiv"></div>
     <div class="headers"><h2 id="opening-hours">Opening Hours</h2></div>
