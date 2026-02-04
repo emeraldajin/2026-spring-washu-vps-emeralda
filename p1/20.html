@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soup Dumplings STL</title>
     <link rel="icon" type ="icon/png" href="dumpling_icon.png">
+    <meta property="og:image" content="above.jpg">
     <style>
         body{
             color:orange;
@@ -47,7 +48,7 @@
         }
         .menu{
             display:grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
             align-items: center;
             margin-top:1em;
             margin-bottom: 3em;
@@ -84,10 +85,13 @@
             z-index:10;
             position:relative;
         }
-        p{
+        p:hover{
+            background-color:rgb(255, 217, 166);
+        }
+        .phone{
             transition:0.5s;
         }
-        p:hover, p:active{
+        .phone:hover, .phone:active{
             transform:scale(0.5);
             z-index:5;
         }
@@ -109,34 +113,36 @@
     <iframe src= "images.html"></iframe>
     <h2 id="menu"><div class="myDiv">Menu</div></h2>
     <div class = "menu">
-        <div class = "outskirt"></div>
-        <div class = "food">
+        <div class="left-column">
+            <div class = "food">
             <h3 id="left"><div>Soup Dumplings</div></h3>
-            <strong>Pork</strong> — $9.00 <br>
-            <strong>Chicken</strong> — $9.00 <br>
-            <strong>Beef</strong> — $9.90 <br>
-            <strong>Crab &amp; Pork</strong> — $12.75 <br>
-            <strong>Shrimp &amp; Cheese</strong> — $12.50 <br>
-            <br>
-            <h3 id="entrees">Entrees</h3>
-            <strong>Chicken Leg &amp; Rice</strong> — $11.50 <br>
-            <strong>Braised Pork &amp; Rice</strong> — $11.50 <br>
-            <strong>Hot Wings</strong> — $8.95 <br>
-        </div>
-        <div class = "food">
+            <p><strong>Pork</strong> — $9.00 </p>
+            <p><strong>Chicken</strong> — $9.00 </p>
+            <p><strong>Beef</strong> — $9.90 </p>
+            <p><strong>Crab &amp; Pork</strong> — $12.75</p>
+            <p><strong>Shrimp &amp; Cheese</strong> — $12.50 </p>
+            </div>
+            <div class = "food">
             <h3 id="cold-dishes">Cold Dishes</h3>
-            <strong>Drunken Chicken</strong> — $15.50 <br>
-            <strong>Cucumber Salad</strong> — $7.95 <br>
-            
-            <h3 id="wonton-soups">Wonton Soups</h3>
-            <strong>Shrimp and Pork</strong> — $13.25 <br>
-            
-            <h3 id="drinks">Drinks</h3>
-            <strong>Fresh Squeezed Juice</strong> — $4.75 <br>
-            <strong>Soda</strong> — $1.95 <br>
-            <strong>Bottle Water</strong> — $1.50 <br>
+            <p><strong>Drunken Chicken</strong> — $15.50 </p>
+            <p><strong>Cucumber Salad</strong> — $7.95 </p>
+            </div>
         </div>
-        <div class = "outskirt"></div>
+        <div class="right-column">
+            <div class = "food">
+            <h3 id="entrees">Entrees</h3>
+            <p><strong>Chicken Leg &amp; Rice</strong> — $11.50 </p>
+            <p><strong>Braised Pork &amp; Rice</strong> — $11.50 </p>
+            <p><strong>Shrimp and Pork Wonton Soup</strong> — $13.25 </p>
+            <p><strong>Hot Wings</strong> — $8.95 </p>
+            </div>
+            <div class = "food">
+            <h3 id="drinks">Drinks</h3>
+            <p><strong>Fresh Squeezed Juice</strong> — $4.75 </p>
+            <p><strong>Soda</strong> — $1.95 </p>
+            <p><strong>Bottle Water</strong> — $1.50</p>
+            </div>
+        </div>
     </div>
     <div class="myDiv"><h2 id="opening-hours">Opening Hours</h2></div>
     <center><table>
@@ -174,7 +180,7 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6229.8935835054!2d-90.3489793244726!3d38.673090871772864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87df34dd538f2797%3A0x9eedc4fd3ad7a4a9!2sSoup%20Dumplings%20STL!5e0!3m2!1sen!2sus!4v1769976273637!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </body>
     <div class="myDiv"><h2 id="call-us-">Call Us?</h2></div>
-    <p>+1-314-445-4605</p>
+    <div class = "phone">+1-314-445-4605</div>
     <br><br><br>
 </body>
 </html>
