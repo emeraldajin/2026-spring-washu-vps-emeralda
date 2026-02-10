@@ -51,8 +51,8 @@
         }
         iframe{
             border:none;
-            width:590px;
-            height:200px;
+            width:700px;
+            height:210px;
             margin-bottom: 1.5em;
             overflow:hidden;
             transition:0.5s;
@@ -64,8 +64,9 @@
         }
         .title{
             text-transform: uppercase;
-            font-size:8.5vw;
+            font-size: 5.5vw;
             line-height:1.1;
+            letter-spacing:-1px;
         }
         .title span{
             display:inline-block;
@@ -80,6 +81,36 @@
         .title span:nth-child(3) {
             animation-delay: 0.6s;
         }
+        .footer{
+            margin-top:1em;
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-bottom: 2em;
+        }
+        .logo{
+            margin-bottom:0px;
+            text-align: left;
+            padding-left:5vw;
+            font-size: 30px;
+            letter-spacing:-1px;
+        }
+        .slogan{
+            text-align: left;
+            padding-left:5vw;
+            margin-bottom:3vw;
+        }
+        .subtle{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: left;
+            padding-left:5vw;
+            font-size:12px;
+        }
+        .icons{
+            display: flex;
+            grid-template-columns: 1fr 1fr;
+            width:30px;
+            height:auto;
+        }
         @keyframes wave{
             0%,100%{
                 transform:translateY(20);
@@ -88,7 +119,6 @@
                 transform:translateY(-20px)
             }
         }
-        
         @media only screen and (max-width:800px){
             .menuDiv{
                 grid-template-columns: 1fr;
@@ -100,7 +130,7 @@
     </style>
 </head>
 <body style = background-color:antiquewhite>
-    <audio autoplay>
+    <udio autoplay>
         <source src="Yum.mp3" type="audio/mpeg">
     </audio>
     <div class="myDiv"><h1 class="title">
@@ -108,6 +138,7 @@
         <span>Dumpling</span>
         <span>STL</span>
     </h1></div> 
+    
     <br>
     <iframe src= "images.html"></iframe>
     <div class="lineDiv"></div>
@@ -174,5 +205,32 @@
     <div class="lineDiv"></div>
     <p>+1-314-445-4605</p>   
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6229.8935835054!2d-90.3489793244726!3d38.673090871772864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87df34dd538f2797%3A0x9eedc4fd3ad7a4a9!2sSoup%20Dumplings%20STL!5e0!3m2!1sen!2sus!4v1769976273637!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="headers">
+        <div class="footer">
+            <div class="mantra">
+                <div class="logo"><b>Soup Dumplings STL</b></div>
+                <p class="slogan">
+                    Delivering a burst of flavor in every bite.
+                </p>
+                <p class = "subtle">8106 Olive Blvd, St. Louis, MO 63130</p>
+            </div>
+            <div class="social">
+                <h5><b>Socials</b></h5>
+                <div class="icons">
+                    <a href="https://www.instagram.com/soupdumplingsstl/">
+                        <img src="insta__icon.png" alt="Instagram icon" style="width:45px">
+                    </a>
+                    <a href="https://www.facebook.com/soupdumplingSTL">
+                        <img src="facebook_icon.png">
+                    </a>
+                </div>
+            </div>
+            <div class="questions">
+                <h5><b>Questions?</b></h5>
+                <p>Give us a call!</p>
+                <p style="font-size: 12px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">+1-314-445-4605</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
