@@ -17,18 +17,67 @@
         a:visited{
             color:cornflowerblue
         }
+        .header{
+            background-color:#4163b1;
+            color:#c0d3fd;
+            padding: 5px;
+            margin:-2vw;
+            padding-top:2vw;
+            text-align:center;
+            width:110%;
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .right{
+            margin-left:5vw;
+            text-align:left;
+            margin-right:7vw;
+        }
+        .projects{
+            margin: auto;
+            margin-top: 5vw;
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            width:60%;
+        }
+        @media only screen and (max-width:700px){
+            .welcome{
+                display:none;
+            }
+        }
     </style>
 </head>
 <body style = background-color:#c0d3fd;>
-    <h1 style = color:#4163b1>Emeralda's Class Website</h1>
-    <p>Welcome to my class website!</p>
-    <hr>
-    <h2>Exercises</h2>
-    <ul>
-        <li><a href="profile-card.html">Profile Card</a></li>
-        <li>Collection of Things</li>
-    </ul>
-    <h2>Readings</h2>
+    <div class="header">
+        <div class="left">
+            <img src="pinata.png" width="150">
+        </div>
+        <div class="center">
+            <h1 class="title">Emeralda's Class Website</h1>
+            <p class="welcome">Welcome to my class website!</p>
+        </div>
+        <div class="right">
+            <br>
+            <p>Spring 2026, (Visual) Principles for Screen</p>
+            <p>Laurel Schwulst</p>
+        </div>
+    </div>
+    <div class="projects">
+        <div class="creations">
+            <h2>Exercises</h2>
+        <ul>
+            <li><a href="profile-card.html">Profile Card</a></li>
+            <li>Collection of Things</li>
+        </ul>
+        <h2>Projects</h2>
+        <ul>
+            <li><a href="p1/index.html"> Project 1. Restaurant or Café Variations</a></li>
+            <li>Project 2. Book → Website</li>
+            <li>Project 3. Standby Mode</li>
+        </ul>
+        </div>
+    <div class="reading">
+        <h2>Readings</h2>
     <ul>
         <li><a href="reading1.html">Restaurant Websites</a></li>
         <li><a href="reading2.html">The New Turing Test</a></li>
@@ -36,12 +85,7 @@
         <li><a href="reading4.html">My website is a shifting house next to a river of knowledge. What could yours be?</a></li>
         <li>...</li>
     </ul>
-    <h2>Projects</h2>
-    <ul>
-        <li><a href="p1/index.html"> Project 1. Restaurant or Café Variations</a></li>
-        <li>Project 2. Book → Website</li>
-        <li>Project 3. Standby Mode</li>
-    </ul>
-    </body>
+    </div>    
+    </div>
 </body>
 </html>
