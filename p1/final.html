@@ -27,11 +27,10 @@
         }
         .menuDiv{
             display:grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            align-items: center;
+            grid-template-columns: 1fr 1fr;
+            margin: auto;
             margin-top:1em;
             margin-bottom: 3em;
-            column-gap: 50px
         }
         .openDiv{
             display:grid;
@@ -46,9 +45,10 @@
             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             line-height:1.6;
         }
-        img{
-            margin: 1.5em;
-            width:80%;
+        table{
+            margin:auto;
+            border-spacing: 20px 0;
+            padding:2em;
         }
         iframe{
             border:none;
@@ -83,10 +83,11 @@
             animation-delay: 0.6s;
         }
         .footer{
+            padding:1vw;
             margin-top:1em;
             display:grid;
             grid-template-columns: 1fr 1fr 1fr;
-            margin-bottom: 2em;
+            background-color:orange;
         }
         .logo{
             margin-bottom:0px;
@@ -120,6 +121,11 @@
             margin: auto;
             margin-top: 1vw;
         }
+        .phone{
+                font-size: 12px; 
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                transition:0.5s;
+        }
         @keyframes wave{
             0%,100%{
                 transform:translateY(20);
@@ -136,6 +142,47 @@
                 width: 100%;
             }
         }
+        @media only screen and (min-width:750px){
+            .myDiv:hover, .myDiv:active{
+                transform:skew(15deg,15deg);
+                z-index:10;
+                position:relative;
+            }
+            .headers{
+                transition: 0.5s;
+            }
+            .headers:hover, .headers:active{
+                transform:skew(-20deg, -20deg);
+                z-index:10;
+                position:relative;
+            }
+            tr{
+                transition:0.5s;
+            }
+            tr:hover,  tr:active{
+                transform: scale(1.5);
+                z-index:5;
+            }
+            .food{
+                transition:0.5s;
+            }
+            .food:hover, .food:active{
+                transform:scale(1.2);
+                z-index:5;
+                position:relative;
+            }
+            .phone:hover, .phone:active{
+                transform:scale(0.5);
+                z-index:5;
+            }
+            .footer{
+                transition:0.5s;
+            }
+            .footer:hover{
+                transform:scale(1.1);
+                z-index:2;
+            }
+        }
     </style>
 </head>
 <body style = background-color:antiquewhite>
@@ -147,14 +194,12 @@
         <span>Dumpling</span>
         <span>STL</span>
     </h1></div> 
-    
     <br>
     <iframe src= "images.html"></iframe>
     <div class="lineDiv"></div>
     <div class="headers"><h2 id="menu">Menu</h2></div>
     <div class="lineDiv"></div>
     <div class = "menuDiv">
-        <div class="outskirt"></div>
         <div class = "food">
             <h3 id="left"><div>Soup Dumplings</div></h3>
             <p class="tiny">Comes with six dumplings each!</p>
@@ -169,7 +214,7 @@
             <strong>Braised Pork &amp; Rice</strong> — $11.50 <br>
             <strong>Hot Wings</strong> — $8.95 <br>
         </div>
-        <div class = "right">
+        <div class = "food">
             <h3 id="cold-dishes">Cold Dishes</h3>
             <strong>Drunken Chicken</strong> — $15.50 <br>
             <strong>Cucumber Salad</strong> — $7.95 <br>
@@ -182,39 +227,47 @@
             <strong>Soda</strong> — $1.95 <br>
             <strong>Bottle Water</strong> — $1.50 <br>
         </div>
-        <div class="outskirt"></div>
     </div>
     <div class="lineDiv"></div>
     <div class="headers"><h2 id="opening-hours">Opening Hours</h2></div>
     <div class="lineDiv"></div>
-    <div class="openDiv">
         <div class="imageDiv"></div>
-        <div class="daysDiv">
-            <b>Monday</b><br>
-            <b>Tuesday</b><br>
-            <b>Wednesday</b><br>
-            <b>Thursday</b><br>
-            <b>Friday</b><br>
-            <b>Saturday</b><br>
-            <b>Sunday</b><br>
-        </div>
-        <div class="timeDiv">
-            11AM–8PM<br>
-            <i>Closed</i><br>
-            11AM–8PM<br>
-            11AM–8PM<br>
-            11AM–8PM<br>
-            11AM–8PM<br>
-            11AM–8PM<br>
-        </div>
+        <table>
+            <tr>
+                <th>Monday</th>
+                <td>11AM-8PM</td>
+            </tr>
+            <tr>
+                <th>Tuesday</th>
+                <td>Closed</td>
+            </tr>
+            <tr>
+                <th>Wednesday</th>
+                <td>11AM-8PM</td>
+            </tr>
+            <tr>
+                <th>Thursday</th>
+                <td>11AM-8PM</td>
+            </tr>
+            <tr>
+                <th>Friday</th>
+                <td>11AM-8PM</td>
+            </tr>
+            <tr>
+                <th>Saturday</th>
+                <td>11AM-8PM</td>
+            </tr>
+            <tr>
+                <th>Sunday</th>
+                <td>11AM-8PM</td>
+            </tr>
+        </table>
         <div class="imageDiv"></div>
-    </div>
     <div class="lineDiv"></div>
     <div class="headers"><h2 id="call-us-">Call and Visit Us?</h2></div>
     <div class="lineDiv"></div>
-    <p>+1-314-445-4605</p>   
+    <p class="phone">+1-314-445-4605</p>   
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6229.8935835054!2d-90.3489793244726!3d38.673090871772864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87df34dd538f2797%3A0x9eedc4fd3ad7a4a9!2sSoup%20Dumplings%20STL!5e0!3m2!1sen!2sus!4v1769976273637!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <div class="headers">
         <div class="footer">
             <div class="mantra">
                 <div class="logo"><b>Soup Dumplings STL</b></div>
@@ -237,9 +290,8 @@
             <div class="questions">
                 <h5><b>Questions?</b></h5>
                 <p>Give us a call!</p>
-                <p style="font-size: 12px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">+1-314-445-4605</p>
+                <p class="phone">+1-314-445-4605</p>
             </div>
         </div>
-    </div>
 </body>
 </html>
