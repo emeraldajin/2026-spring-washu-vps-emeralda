@@ -76,7 +76,6 @@
         }
         .end:hover{
             transform:scale(1.2);
-            z-index:5;
         }
         summary:hover{
             background-color: azure;
@@ -111,15 +110,25 @@
         }
         .plane{
             position:absolute;
-            top:370px;
+            top:400px;
             left:-200px;
+            transition:0.5s;
+        }
+        .plane:hover{
+            transform:scale(1.5);
+            z-index:5;
         }
         .bass{
             position:absolute;
-            top:370px;
+            top:400px;
             right:-190px;
             transform: rotate(-20deg);
             cursor: url("tiny-bass.png"), auto;
+            transition:0.5s;
+        }
+        .bass:hover{
+            transform:scale(1.5);
+            z-index:5;
         }
     </style>
 </head>
