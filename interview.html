@@ -98,10 +98,27 @@
             display:grid;
             grid-template-columns: 1fr 1fr;
         }
+        .top{
+            display:flex;
+            position:relative;
+        }
+        .plane{
+            position:absolute;
+            top:370px;
+            left:-200px;
+        }
+        .bass{
+            position:absolute;
+            top:370px;
+            right:-190px;
+            transform: rotate(-20deg);
+        }
     </style>
 </head>
 <body>
-    <div class="herohero">
+    <div class="top">
+        <img class = "plane" src="plane.png" width="300px" height="127px">
+        <div class="herohero">
         <div class="hero">
         <div class="left">
             <h1>A Software Engineer's Opinion on Technology</h1>
@@ -116,6 +133,8 @@
         <div class="entry">
             <p class="chad">Chad Myers is a Boeing software engineer from Springfield, MO. He double-majored in Computer Science and English Literature at Truman State, and is currently pursuing a Masters in Electrical Engineering at WashU.</p>
         </div>
+        <img class="bass" src="bass.png" width="250px" height="250px">
+    </div>
     </div>
     <div class="interview">
     <div class="question">
