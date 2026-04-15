@@ -18,15 +18,15 @@
             color:cornflowerblue
         }
         .header{
+            display:flex;
             background-color:#4163b1;
             color:#c0d3fd;
             padding: 5px;
             margin:-2vw;
             padding-top:2vw;
             text-align:center;
-            width:110%;
-            display:grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            justify-items: center;
+            justify-content:center;
         }
         .right{
             margin-left:5vw;
@@ -45,12 +45,19 @@
                 display:none;
             }
         }
+        .pinata{
+            transition:0.5s;
+            margin-right:5vw;
+        }
+        .pinata:hover{
+            transform:rotate(360deg);
+        }
     </style>
 </head>
 <body style = background-color:#c0d3fd;>
     <div class="header">
         <div class="left">
-            <img src="pinata.png" width="150">
+            <img class="pinata" src="pinata.png" width="150">
         </div>
         <div class="center">
             <h1 class="title">Emeralda's Class Website</h1>
