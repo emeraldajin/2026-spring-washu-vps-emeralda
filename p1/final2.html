@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soup Dumplings STL</title>
+    <link rel="icon" type ="icon/png" href="dumpling_icon.png">
+    <meta property="og:image" content="above.jpg">
+    <script src="https://kit.fontawesome.com/40b82196de.js" crossorigin="anonymous"></script>
+    <style>
+        .tiny{
+            font-size: small;
+        }
+        .myDiv{
+        background-color:orange;
+        padding:3px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: large;
+        }
+        .lineDiv{
+        background-color:brown;
+        height:1px
+        }
+        .headers{
+            background-color:orange;
+            padding: 1px;
+        }
+        .menuDiv{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            margin: auto;
+            margin-top:1em;
+            margin-bottom: 3em;
+        }
+        .openDiv{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            align-items: center;
+            margin-bottom:3em;
+            margin-top: 2em;
+        }
+        body{
+            color:brown;
+            text-align:center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            line-height:1.6;
+        }
+        table{
+            margin:auto;
+            border-spacing: 20px 0;
+            padding:2em;
+        }
+        iframe{
+            border:none;
+            width:700px;
+            height:210px;
+            margin-bottom: 1.5em;
+            overflow:hidden;
+            transition:0.5s;
+        }
+        iframe:hover{
+            transform: scale(1.5);
+            z-index:10;
+            position:relative;
+        }
+        .title{
+            text-transform: uppercase;
+            font-size: 5.5vw;
+            line-height:1.1;
+            letter-spacing:-1px;
+        }
+        .title span{
+            display:inline-block;
+            animation: wave 2s ease-in-out infinite;
+        }
+        .title span:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .title span:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+        .title span:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        .footer{
+            padding:1vw;
+            margin-top:1em;
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            background-color:orange;
+        }
+        .logo{
+            margin-bottom:0px;
+            text-align: left;
+            padding-left:5vw;
+            font-size: 30px;
+            letter-spacing:-1px;
+        }
+        .slogan{
+            text-align: left;
+            padding-left:5vw;
+            margin-bottom:3vw;
+        }
+        .subtle{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: left;
+            padding-left:5vw;
+            font-size:12px;
+        }
+        .icons{
+            display: flex;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            gap:1.5vw;
+            a{
+                color:brown;
+            }
+        }
+        .social{
+            text-align: center;
+            margin: auto;
+            margin-top: 1vw;
+        }
+        .phone{
+                font-size: 12px; 
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                transition:0.5s;
+        }
+        @keyframes wave{
+            0%,100%{
+                transform:translateY(20);
+            }
+            50%{
+                transform:translateY(-20px)
+            }
+        }
+        @media only screen and (max-width:800px){
+            .menuDiv{
+                grid-template-columns: 1fr;
+            }
+            .myDiv, .titleDiv, table, iframe{
+                width: 100%;
+            }
+        }
+        @media only screen and (min-width:750px){
+            .myDiv:hover, .myDiv:active{
+                transform:skew(15deg,15deg);
+                z-index:10;
+                position:relative;
+            }
+            .headers{
+                transition: 0.5s;
+            }
+            .headers:hover, .headers:active{
+                transform:skew(-20deg, -20deg);
+                z-index:10;
+                position:relative;
+            }
+            table{
+            transition:0.5s;
+            padding:2em;
+        }
+        td, th {
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top:5px;
+        }
+        tr{
+            padding:5px;
+            transition:0.5s;
+        }
+        tr:hover,  tr:active{
+            transform: scale(1.5);
+            z-index:5;
+        }
+        .menu{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            width:700px;
+            margin:auto;
+            margin-top:5vw;
+            margin-bottom: 3em;
+            justify-items: center;
+            justify-content: center;
+        }
+        .food{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            width:400px;
+            margin:10px;
+            justify-self: center;
+            transition:0.5s;
+        }
+        .food:hover, .food:active{
+            background-color:rgb(255, 217, 166);
+        }
+        .phone:hover, .phone:active{
+                transform:scale(0.5);
+                z-index:5;
+        }
+        .footer{
+                transition:0.5s;
+        }
+        .footer:hover{
+                transform:scale(1.1);
+                z-index:2;
+        }
+        .hero{
+                padding: 2em;
+                padding-bottom: 0em;
+                display:flex;
+                justify-content: center;
+        }
+        .hleft{
+                align-self: center;
+                margin:4vw;
+        }
+        .hright{
+                margin: 4vw;
+        }
+        .round{
+                background-color: orange;
+                font-weight: bold;
+                border-radius: 15px;
+                padding: 0.25px;
+                transition:0.5s;
+        }
+        .round:hover, .myround:active{
+                transform:skew(-20deg, -20deg);
+                z-index:10;
+                position:relative;
+        }
+        .item{
+                text-align:left;
+        }
+        .price{
+                text-align:right;
+        }
+        .section{
+                margin:10px;
+                justify-self:center;
+                width:500px;
+        }
+        .end-image{
+            margin-top:3vw;
+            margin-bottom:5vw;
+        }
+        @media only screen and (max-width:700px){
+            .food{
+                display:flex;
+            }
+            .menu{
+                    grid-template-columns: 1fr;
+            }
+            .myDiv, .titleDiv, table, iframe{
+                    width: 100%;
+            }
+        }
+        }
+    </style>
+</head>
+<body style = background-color:antiquewhite>
+    <udio autoplay>
+        <source src="Yum.mp3" type="audio/mpeg">
+    </audio>
+    <div class="myDiv"><h1 class="title">
+        <span>Soup</span>
+        <span>Dumpling</span>
+        <span>STL</span>
+    </h1></div> 
+    <div class="hero">
+        <div class="hleft"> <img src="above.jpg" height="300px"></div>
+        <div class="hright">
+            <div class="round"> <h3>Opening Hours</h3></div>
+            <table>
+                <tr>
+                    <th>Monday</th>
+                    <td>11AM-8PM</td>
+                </tr>
+                <tr>
+                    <th>Tuesday</th>
+                    <td>Closed</td>
+                </tr>
+                <tr>
+                    <th>Wednesday</th>
+                    <td>11AM-8PM</td>
+                </tr>
+                <tr>
+                    <th>Thursday</th>
+                    <td>11AM-8PM</td>
+                </tr>
+                <tr>
+                    <th>Friday</th>
+                    <td>11AM-8PM</td>
+                </tr>
+                <tr>
+                    <th>Saturday</th>
+                    <td>11AM-8PM</td>
+                </tr>
+                <tr>
+                    <th>Sunday</th>
+                    <td>11AM-8PM</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="lineDiv"></div>
+    <div class="headers"><h2 id="menu">Menu</h2></div>
+    <div class="lineDiv"></div>
+    </div>
+            <div class="menu">
+                <div class="section">
+                <h3>Soup Dumplings</h3>
+                <div class = "food">
+                    <div class="item">Pork</div>
+                    <div class="price">9.00</div>
+                </div>
+                <div class = "food">
+                    <div class="item">Chicken</div>
+                    <div class="price">9.00</div>
+                </div>
+                <div class = "food">
+                    <div class="item">Beef</div>
+                    <div class="price">9.90</div>
+                </div>
+                <div class = "food">
+                    <div class="item">Shrimp &amp; Cheese</div>
+                    <div class="price">12.50</div>
+                </div>
+                <div class = "food">
+                    <div class="item">Crab &amp; Pork</div>
+                    <div class="price">12.75</div>
+                </div>
+                </div>
+                <div class="section">
+                    <img src="dumplings.jpg" height="300px">
+                </div>
+            </div>
+            <div class="menu">
+                <div class="section">
+                    <img src="entree.jpg" height="350px">
+                </div>
+                <div class="section">
+                    <h3>Entrees</h3>
+                    <div class="food">
+                        <div class="item">Chicken Leg &amp; Rice</div>
+                    <div class="price">11.50</div>
+                    </div>
+                    <div class="food">
+                        <div class="item">Braised Pork &amp; Rice</div>
+                    <div class="price">11.50</div>
+                    </div>
+                    <div class="food">
+                        <div class="item">Shrimp and Pork Wonton Soup</div>
+                    <div class="price">13.25</div>
+                    </div>
+                    <div class="food">
+                        <div class="item">Hot Wings</div>
+                    <div class="price">8.95</div>
+                    </div>            
+                </div>
+            </div>
+            <div class="menu">
+                <div class="section">
+                    <h3>Cold Dishes</h3>
+                    <div class="food">
+                        <div class="item">Drunken Chicken</div>
+                    <div class="price">15.50</div>
+                    </div>
+                    <div class="food">
+                        <div class="item">Cucumber Salad</div>
+                        <div class="price">7.95</div>
+                    </div>
+                </div>
+                <div class="section">
+                    <h3>Drinks</h3>
+                    <div class="food">
+                        <div class="item">Fresh Squeezed Juice</div>
+                        <div class="price">4.75</div>
+                    </div>
+                    <div class="food">
+                        <div class="item">Soda</div>
+                        <div class="price">1.95</div>
+                    </div>
+                    <div class="food">
+                        <div class="item">Bottle Water</div>
+                        <div class="price">1.50</div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <img class="end-image" src="restaurant_inside.jpg" height="500px">
+    <div class="lineDiv"></div>
+    <div class="headers"><h2 id="call-us-">Call and Visit Us?</h2></div>
+    <div class="lineDiv"></div>
+    <p class="phone">+1-314-445-4605</p>   
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6229.8935835054!2d-90.3489793244726!3d38.673090871772864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87df34dd538f2797%3A0x9eedc4fd3ad7a4a9!2sSoup%20Dumplings%20STL!5e0!3m2!1sen!2sus!4v1769976273637!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="footer">
+            <div class="mantra">
+                <div class="logo"><b>Soup Dumplings STL</b></div>
+                <p class="slogan">
+                    Delivering a burst of flavor in every bite.
+                </p>
+                <p class = "subtle">8106 Olive Blvd, St. Louis, MO 63130</p>
+            </div>
+            <div class="social">
+                <h5 style="text-align:center"><b>Socials</b></h5>
+                <div class="icons">
+                    <a href="https://www.facebook.com/soupdumplingSTL">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/soupdumplingsstl/">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="questions">
+                <h5><b>Questions?</b></h5>
+                <p>Give us a call!</p>
+                <p class="phone">+1-314-445-4605</p>
+            </div>
+        </div>
+</body>
+</html>
